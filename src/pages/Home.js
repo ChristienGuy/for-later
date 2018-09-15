@@ -4,7 +4,7 @@ import { firestore } from "../firebase";
 const Bookmarks = ({ bookmarks }) => (
   <ul>
     {bookmarks.map(bookmark => (
-      <li key={bookmark.id}>{bookmark.url}</li>
+      <li key={bookmark.id}><a href={bookmark.url}>{bookmark.title}</a></li>
     ))}
   </ul>
 );

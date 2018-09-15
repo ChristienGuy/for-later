@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import theme from "../../theme";
 
 const LabelStyled = styled("label")`
   display: flex;
@@ -14,6 +15,10 @@ const LabelStyled = styled("label")`
   color: ${({ theme }) => theme.colors.primary};
 `;
 
-const Label = ({ children }) => <LabelStyled>{children}</LabelStyled>;
+const Label = ({ children, theme }) => <LabelStyled theme={theme}>{children}</LabelStyled>;
+
+Label.defaultProps = {
+  theme: theme
+};
 
 export default Label;

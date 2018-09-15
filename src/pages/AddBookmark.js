@@ -1,8 +1,12 @@
 import React, { Component } from "react";
+import { firestore } from "../firebase";
 
 import BookmarkForm from "components/BookmarkForm";
 
 class AddBookmarkPage extends Component {
+  componentDidMount() {
+    this.db = firestore;
+  }
   handleBookmarkSubmit = bookmark => {
     const { user } = this.props;
 
