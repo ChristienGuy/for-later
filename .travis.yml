@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+    - "node_modules" # This will tell Travis CI to cache the dependencies
+script: yarn test # Here you could also run the build step of your application
