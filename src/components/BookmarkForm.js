@@ -1,17 +1,6 @@
 import React, { Component } from "react";
-import styled from "styled-components";
-import Label from "components/Label";
-
-const Input = styled("input")`
-  padding: 12px 16px;
-  font-size: 1rem;
-  line-height: 1.5;
-
-  border-radius: 2px;
-  border: 0;
-  border-left: 3px solid ${({ theme }) => theme.colors.primary};
-  background-color: ${({ theme }) => theme.colors.primaryLight};
-`;
+import Label from 'components/Label';
+import Input from 'components/Input';
 
 class BookmarkForm extends Component {
   state = {
@@ -46,6 +35,7 @@ class BookmarkForm extends Component {
             value={url}
             type="text"
             name="url"
+            placeholder="https:// ..."
           />
         </Label>
         <Label>
@@ -55,6 +45,7 @@ class BookmarkForm extends Component {
             value={title}
             type="text"
             name="title"
+            placeholder="My Cool Website"
           />
         </Label>
         <input type="submit" value="Add bookmark" />
